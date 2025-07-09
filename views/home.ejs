@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill the Form ✍️🌼</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #00bbef, #aeddff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .link-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .link-container:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        h3 {
+            font-size: 24px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        h3:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <h1><%= iid.cmnt %></h1>
+
+    <div class="link-container">
+        <a href="http://localhost:7485/gotoform">
+            <h3>Click Here to Fill the Form ✍️</h3>
+        </a>
+    </div>
+<button><a href="http://localhost:7485/sdata" style="color: black;">update</a></button>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configiring Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #f8cdda, #fbc2eb);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            width: 300px;
+        }
+
+        .form-container h1 {
+            font-size: 24px;
+            color: #0b0062;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s ease;
+        }
+
+        .form-container input:focus {
+            border-color: #ff0050;
+            box-shadow: 0 0 5px rgba(255, 0, 80, 0.3);
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff0050;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #e60047;
+        }
+
+        .back-btn {
+            margin-top: 20px;
+        }
+
+        .back-btn a {
+            text-decoration: none;
+            background-color: #ffc0cb;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn a:hover {
+            background-color: #ff9aa2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Conformation Form</h1>
+        <form action="http://localhost:7485/form" method="post" enctype="application/x-www-form-urlencoded">
+            <input type="text" name="username" placeholder="Username" >
+            <input type="password" name="password" placeholder="Password" >
+            <button type="submit">Save</button>
+        </form>
+    </div>
+
+    <div class="back-btn">
+        <a href="http://localhost:7485/">←Back To Page</a>
+    </div>
+
+</body>
+</html>

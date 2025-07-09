@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .d {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #like {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: white;
+            margin: 10px auto;
+            padding: 10px;
+            max-width: 500px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: inline;
+        }
+
+        #cmt {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #aa {
+            margin-top: 10px;
+            background-color: #28a745;
+        }
+
+        #aa:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="download.jpeg" alt="Pattern" height="500">
+
+    <div class="d">
+        <button id="bt">Like</button>
+        <p id="like">0</p>
+    </div>
+
+    <% for (c of cnt) { %>
+    <div>
+        <ul>
+            <li>
+                <%= c.cmnt %>
+                <button>x</button>
+                <form action="/img/<%= c.id %>" method="post">
+                    <button>Details</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <% } %>
+
+    <form action="http://localhost:7485/cmnt" id="cmt" method="post" style="display: none;">
+        <input type="text" name="cmnt" placeholder="Add a Comment" required>
+        <button type="submit">OK</button> 
+    </form>
+
+    <button id="aa" onclick=clk()>Comment</button>
+
+    <script src="count.js"></script>
+</body>
+</html>
